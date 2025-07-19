@@ -1,0 +1,208 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #AAAAAA;
+}
+/* shared selector */
+.display-flex{
+    display:flex;
+}
+.btn-primary{
+    background-color: #E02C6D;
+    color:#ffffff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 40px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+/* nav area styles */
+.header-area{
+    max-width: 1110px;
+    width:100%;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+
+.nav-link{
+    display: block;
+}
+
+.nav-area{
+    justify-content: space-between;
+}
+.menu-icon{
+    font-size: 2rem;
+    display: none;
+}
+.cart-mobile{
+    display:none;
+}
+.nav-title{
+    font-size:1.5rem;
+    font-weight: 700;
+}
+.nav-links{
+    list-style: none;
+    gap: 20px;
+    cursor: pointer;
+    
+}
+#sign-up{
+    white-space: nowrap;
+}
+#log-in{
+    white-space: nowrap;
+}
+.nav-links a{
+    text-decoration: none;
+    color: #3A3A3A;
+    font-weight: 600;
+}
+/* banner-area */
+.banner-area{
+    gap:133px;
+}
+.banner-text{
+    margin-top: 145px;
+    width: 582px;
+}
+.banner-title{
+    font-size: 3.01rem;
+    font-weight: 700;
+    color: #3A3A3A;
+}
+.banner-description{
+    font-weight: 500;
+    color: #3A3A3A;
+}
+
+.banner-img{
+    position: relative;
+    margin-top: 80px;
+}
+.img-1{
+    width:100%;
+}
+.img-2{
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    width:100%;
+}
+.banner-sponsors{
+    margin-top: 100px;
+    border: 1px solid rgba(192, 204, 218, 1);
+}
+.sponsors-img{
+    display: grid;
+    grid-template-columns:repeat(7, 1fr);
+    padding: 40px 60px;
+    
+}
+/* media query */
+@media screen and (max-width: 576px) {
+
+    body{
+        background-color: aliceblue;
+    }
+  /* মোবাইলে মেনু আইকন (☰) দেখাবে */
+  .menu-icon {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  /* মোবাইলে cart আইকন দেখাবে */
+  .cart-mobile {
+    display: block;
+  }
+
+  /* যেসব ক্লাস desktop নামে আছে, সেগুলো মোবাইলে লুকাবে */
+  .desktop {
+    display: none !important;
+  }
+
+  /* nav-links মোবাইলে কলাম আকারে সাজানো */
+  .nav-links {
+display: none;
+  }
+
+  .nav-area {
+    /* flex-wrap: wrap; */
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .nav-title {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+
+  /* ব্যানার এরিয়া মোবাইলে একের পর এক (column) */
+  .banner-area {
+    flex-direction: column-reverse;
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .banner-text {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .banner-title {
+    font-size: 2rem;
+  }
+
+  .banner-description {
+    font-size: 1rem;
+  }
+
+  .banner-img {
+    margin-top: 40px;
+  }
+
+  .img-1,
+  .img-2 {
+    width: 100%;
+  }
+
+  .img-2 {
+    top: 0;
+    left: 0;
+  }
+
+  /* sponsors logo মোবাইলে grid-এ কম কলাম */
+  .sponsors-img {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+}
+@media screen and (min-width:576px) and (max-width:992px) {
+    .nav-area{
+      margin: 0 40px;
+    }
+    .banner-area{
+        margin: 0 40px;
+    }
+    .banner-title{
+        font-size: 2.5rem;
+    }
+}
+
